@@ -13,7 +13,7 @@ function ItemList() {
     <div>
       <button onClick={addItem}>{TEXTS.ADD}</button>
       <ul>
-        {items.map(item => <Item key={item} id={item} onDeleteClick={deleteItem}/>)}
+        {items.map(item => <Item key={item} id={item} onDeleteItem={deleteItem}/>)}
       </ul>
     </div>
   )

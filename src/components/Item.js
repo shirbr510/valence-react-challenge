@@ -2,12 +2,13 @@ import { memo, useCallback, useRef } from "react";
 import Counter from "./Counter";
 import TEXTS from "../Texts";
 
-function Item({id, onDeleteClick}) {
-  const handleDeleteClick = useCallback(() => onDeleteClick(id),[onDeleteClick, id])
+function Item({ id, onDeleteItem }) {
+  const deleteItem = useCallback(() => onDeleteItem(id),[onDeleteItem, id])
+
   return (
     <li>
       <Counter/>
-      <button onClick={handleDeleteClick}>{TEXTS.DELETE}</button>
+      <button onClick={deleteItem}>{TEXTS.DELETE}</button>
     </li>
   )
 
