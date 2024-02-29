@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useRef } from "react";
+import { memo, useCallback } from "react";
 import Counter from "./Counter";
 import TEXTS from "../Texts";
 import Age from "./Age";

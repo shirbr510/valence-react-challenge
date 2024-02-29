@@ -1,9 +1,9 @@
-import { memo, useCallback, useState } from "react";
+import { memo } from "react";
+import { useCounter } from "./hooks";
 
 function Counter() {
-  const [value, setValue] = useState(0);
-  const increment = useCallback(() => setValue(value + 1), [value, setValue]);
-  return <button onClick={increment}>{value}</button>
+  const {count, increment} = useCounter(0);
+  return <button onClick={increment}>{count}</button>
 
 }
 
